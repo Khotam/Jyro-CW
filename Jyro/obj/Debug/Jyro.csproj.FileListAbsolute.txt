@@ -1,0 +1,17 @@
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.csprojAssemblyReference.cache
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.ParentForm.resources
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.Properties.Resources.resources
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.csproj.GenerateResource.cache
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.csproj.CoreCompileInputs.cache
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\Jyro.exe.config
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\Jyro.exe
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\Jyro.pdb
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.exe
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.pdb
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.AboutForm.resources
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\Jyro.DAL.dll
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\System.Data.SqlServerCe.dll
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\Jyro.DAL.pdb
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\bin\Debug\Jyro.DAL.dll.config
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.csproj.CopyComplete
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro\obj\Debug\Jyro.TicketListForm.resources
