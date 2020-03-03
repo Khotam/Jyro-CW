@@ -50,7 +50,7 @@ namespace Jyro
         {
             tbxSummary.Text = Ticket.Summary;
             tbxDescription.Text = Ticket.Description;
-            cbxEstimation.SelectedItem = Ticket.Estimation;
+            nudEstimation.Value = Ticket.Estimation;
             cbxPriority.SelectedItem = Ticket.Priority;
             cbxStatus.SelectedItem = Ticket.Status;
             cbxSprintID.SelectedItem = Ticket.SprintId;
@@ -60,7 +60,7 @@ namespace Jyro
         {
              Ticket.Summary = tbxSummary.Text;
              Ticket.Description = tbxDescription.Text;
-             Ticket.Estimation = (int)cbxEstimation.SelectedItem;
+             Ticket.Estimation = (int)nudEstimation.Value;
              Ticket.Priority = (string)cbxPriority.SelectedItem;
              Ticket.Status = (string)cbxStatus.SelectedItem;
              Ticket.SprintId = (Sprint)cbxSprintID.SelectedItem;
@@ -69,6 +69,26 @@ namespace Jyro
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                GrabUserInput();
+                var manager = new TicketManager();
+                if (Mode == FormMode.Create)
+                    manager.Create(Ticket);
+                else
+                    manager.Update(Ticket);
+
+                MyForms.GetForm<TicketListForm>().LoadData();
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

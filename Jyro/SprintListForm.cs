@@ -49,5 +49,10 @@ namespace Jyro
             MdiParent = MyForms.GetForm<ParentForm>();
             LoadData();
         }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            new SprintEditForm().CreateNewSprint();
+        }
     }
 }

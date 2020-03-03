@@ -60,7 +60,7 @@ namespace Jyro
             if (cbxSearch.SelectedIndex < 0)
                 MessageBox.Show("Select an attribute to search by");
             else if (nudSearch.Value <= 0)
-                MessageBox.Show("Provide the search term");
+                MessageBox.Show("Cannot be negative number");
             else
             {
                 dgv.DataMember = "";

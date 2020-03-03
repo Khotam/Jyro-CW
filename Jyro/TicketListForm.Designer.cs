@@ -30,6 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estimationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sprintIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -39,17 +47,9 @@
             this.cbxSort = new System.Windows.Forms.ComboBox();
             this.cbxSearch = new System.Windows.Forms.ComboBox();
             this.nudSearch = new System.Windows.Forms.NumericUpDown();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estimationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sprintIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv
@@ -72,13 +72,59 @@
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(744, 264);
+            this.dgv.Size = new System.Drawing.Size(746, 264);
             this.dgv.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // summaryDataGridViewTextBoxColumn
+            // 
+            this.summaryDataGridViewTextBoxColumn.DataPropertyName = "Summary";
+            this.summaryDataGridViewTextBoxColumn.HeaderText = "Summary";
+            this.summaryDataGridViewTextBoxColumn.Name = "summaryDataGridViewTextBoxColumn";
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            // 
+            // estimationDataGridViewTextBoxColumn
+            // 
+            this.estimationDataGridViewTextBoxColumn.DataPropertyName = "Estimation";
+            this.estimationDataGridViewTextBoxColumn.HeaderText = "Estimation";
+            this.estimationDataGridViewTextBoxColumn.Name = "estimationDataGridViewTextBoxColumn";
+            // 
+            // priorityDataGridViewTextBoxColumn
+            // 
+            this.priorityDataGridViewTextBoxColumn.DataPropertyName = "Priority";
+            this.priorityDataGridViewTextBoxColumn.HeaderText = "Priority";
+            this.priorityDataGridViewTextBoxColumn.Name = "priorityDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // sprintIdDataGridViewTextBoxColumn
+            // 
+            this.sprintIdDataGridViewTextBoxColumn.DataPropertyName = "SprintId";
+            this.sprintIdDataGridViewTextBoxColumn.HeaderText = "SprintId";
+            this.sprintIdDataGridViewTextBoxColumn.Name = "sprintIdDataGridViewTextBoxColumn";
+            // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataSource = typeof(Jyro.DAL.Ticket);
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnAdd.Location = new System.Drawing.Point(888, 43);
+            this.btnAdd.Location = new System.Drawing.Point(775, 47);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 1;
@@ -89,7 +135,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnRefresh.Location = new System.Drawing.Point(888, 92);
+            this.btnRefresh.Location = new System.Drawing.Point(775, 96);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 2;
@@ -100,7 +146,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnUpdate.Location = new System.Drawing.Point(888, 142);
+            this.btnUpdate.Location = new System.Drawing.Point(775, 146);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 3;
@@ -111,7 +157,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDelete.Location = new System.Drawing.Point(888, 192);
+            this.btnDelete.Location = new System.Drawing.Point(775, 196);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 4;
@@ -171,57 +217,11 @@
             this.nudSearch.Size = new System.Drawing.Size(120, 20);
             this.nudSearch.TabIndex = 9;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // summaryDataGridViewTextBoxColumn
-            // 
-            this.summaryDataGridViewTextBoxColumn.DataPropertyName = "Summary";
-            this.summaryDataGridViewTextBoxColumn.HeaderText = "Summary";
-            this.summaryDataGridViewTextBoxColumn.Name = "summaryDataGridViewTextBoxColumn";
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            // 
-            // estimationDataGridViewTextBoxColumn
-            // 
-            this.estimationDataGridViewTextBoxColumn.DataPropertyName = "Estimation";
-            this.estimationDataGridViewTextBoxColumn.HeaderText = "Estimation";
-            this.estimationDataGridViewTextBoxColumn.Name = "estimationDataGridViewTextBoxColumn";
-            // 
-            // priorityDataGridViewTextBoxColumn
-            // 
-            this.priorityDataGridViewTextBoxColumn.DataPropertyName = "Priority";
-            this.priorityDataGridViewTextBoxColumn.HeaderText = "Priority";
-            this.priorityDataGridViewTextBoxColumn.Name = "priorityDataGridViewTextBoxColumn";
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // sprintIdDataGridViewTextBoxColumn
-            // 
-            this.sprintIdDataGridViewTextBoxColumn.DataPropertyName = "SprintId";
-            this.sprintIdDataGridViewTextBoxColumn.HeaderText = "SprintId";
-            this.sprintIdDataGridViewTextBoxColumn.Name = "sprintIdDataGridViewTextBoxColumn";
-            // 
-            // ticketBindingSource
-            // 
-            this.ticketBindingSource.DataSource = typeof(Jyro.DAL.Ticket);
-            // 
             // TicketListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 450);
+            this.ClientSize = new System.Drawing.Size(871, 450);
             this.Controls.Add(this.nudSearch);
             this.Controls.Add(this.cbxSearch);
             this.Controls.Add(this.cbxSort);
@@ -236,8 +236,8 @@
             this.Text = "Tickets";
             this.Load += new System.EventHandler(this.TicketListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

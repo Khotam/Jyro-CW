@@ -38,10 +38,11 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.tbxSummary = new System.Windows.Forms.TextBox();
             this.tbxDescription = new System.Windows.Forms.TextBox();
-            this.cbxEstimation = new System.Windows.Forms.ComboBox();
             this.cbxPriority = new System.Windows.Forms.ComboBox();
             this.cbxStatus = new System.Windows.Forms.ComboBox();
             this.cbxSprintID = new System.Windows.Forms.ComboBox();
+            this.nudEstimation = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nudEstimation)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSummary
@@ -106,6 +107,7 @@
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -131,20 +133,6 @@
             this.tbxDescription.Name = "tbxDescription";
             this.tbxDescription.Size = new System.Drawing.Size(121, 20);
             this.tbxDescription.TabIndex = 3;
-            // 
-            // cbxEstimation
-            // 
-            this.cbxEstimation.FormattingEnabled = true;
-            this.cbxEstimation.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cbxEstimation.Location = new System.Drawing.Point(193, 92);
-            this.cbxEstimation.Name = "cbxEstimation";
-            this.cbxEstimation.Size = new System.Drawing.Size(121, 21);
-            this.cbxEstimation.TabIndex = 5;
             // 
             // cbxPriority
             // 
@@ -179,6 +167,13 @@
             this.cbxSprintID.Size = new System.Drawing.Size(121, 21);
             this.cbxSprintID.TabIndex = 11;
             // 
+            // nudEstimation
+            // 
+            this.nudEstimation.Location = new System.Drawing.Point(193, 93);
+            this.nudEstimation.Name = "nudEstimation";
+            this.nudEstimation.Size = new System.Drawing.Size(120, 20);
+            this.nudEstimation.TabIndex = 14;
+            // 
             // TicketEditForm
             // 
             this.AcceptButton = this.btnSave;
@@ -186,10 +181,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nudEstimation);
             this.Controls.Add(this.cbxSprintID);
             this.Controls.Add(this.cbxStatus);
             this.Controls.Add(this.cbxPriority);
-            this.Controls.Add(this.cbxEstimation);
             this.Controls.Add(this.tbxDescription);
             this.Controls.Add(this.tbxSummary);
             this.Controls.Add(this.btnCancel);
@@ -202,6 +197,7 @@
             this.Controls.Add(this.lblSummary);
             this.Name = "TicketEditForm";
             this.Text = "TicketEditForm";
+            ((System.ComponentModel.ISupportInitialize)(this.nudEstimation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,9 +215,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TextBox tbxSummary;
         private System.Windows.Forms.TextBox tbxDescription;
-        private System.Windows.Forms.ComboBox cbxEstimation;
         private System.Windows.Forms.ComboBox cbxPriority;
         private System.Windows.Forms.ComboBox cbxStatus;
         private System.Windows.Forms.ComboBox cbxSprintID;
+        private System.Windows.Forms.NumericUpDown nudEstimation;
     }
 }
