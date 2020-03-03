@@ -57,8 +57,46 @@ namespace Jyro
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            
+            if (cbxSearch.SelectedIndex < 0)
+                MessageBox.Show("Select an attribute to search by");
+            else if (nudSearch.Value <= 0)
+                MessageBox.Show("Provide the search term");
+            else
+            {
+                dgv.DataMember = "";
+                dgv.DataSource = null;
+                dgv.DataSource = new TicketList().Search((int)nudSearch.Value);
+            }
 
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            new TicketEditForm().CreateNewTicket();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select a ticket");
+            else
+            {
+                var t = (Ticket)dgv.SelectedRows[0].DataBoundItem;
+                new TicketEditForm().UpdateTicket(t);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv.SelectedRows.Count == 0)
+                MessageBox.Show("Please select a ticket");
+            else
+            {
+                var t = (Ticket)dgv.SelectedRows[0].DataBoundItem;
+                new TicketManager().Delete(t.Id);
+                LoadData();
+            }
         }
     }
        

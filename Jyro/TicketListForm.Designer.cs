@@ -38,8 +38,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.cbxSort = new System.Windows.Forms.ComboBox();
             this.cbxSearch = new System.Windows.Forms.ComboBox();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nudSearch = new System.Windows.Forms.NumericUpDown();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.summaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +46,9 @@
             this.priorityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sprintIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.sprintIdDataGridViewTextBoxColumn});
             this.dgv.DataSource = this.ticketBindingSource;
             this.dgv.Location = new System.Drawing.Point(12, 12);
+            this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(744, 264);
@@ -82,6 +84,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnRefresh
             // 
@@ -103,6 +106,7 @@
             this.btnUpdate.TabIndex = 3;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -113,6 +117,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSort
             // 
@@ -152,22 +157,19 @@
             // 
             this.cbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbxSearch.FormattingEnabled = true;
+            this.cbxSearch.Items.AddRange(new object[] {
+            "ID"});
             this.cbxSearch.Location = new System.Drawing.Point(12, 339);
             this.cbxSearch.Name = "cbxSearch";
             this.cbxSearch.Size = new System.Drawing.Size(121, 21);
             this.cbxSearch.TabIndex = 8;
             // 
-            // tbxSearch
+            // nudSearch
             // 
-            this.tbxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbxSearch.Location = new System.Drawing.Point(159, 339);
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
-            this.tbxSearch.TabIndex = 9;
-            // 
-            // ticketBindingSource
-            // 
-            this.ticketBindingSource.DataSource = typeof(Jyro.DAL.Ticket);
+            this.nudSearch.Location = new System.Drawing.Point(149, 339);
+            this.nudSearch.Name = "nudSearch";
+            this.nudSearch.Size = new System.Drawing.Size(120, 20);
+            this.nudSearch.TabIndex = 9;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -211,12 +213,16 @@
             this.sprintIdDataGridViewTextBoxColumn.HeaderText = "SprintId";
             this.sprintIdDataGridViewTextBoxColumn.Name = "sprintIdDataGridViewTextBoxColumn";
             // 
+            // ticketBindingSource
+            // 
+            this.ticketBindingSource.DataSource = typeof(Jyro.DAL.Ticket);
+            // 
             // TicketListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 450);
-            this.Controls.Add(this.tbxSearch);
+            this.Controls.Add(this.nudSearch);
             this.Controls.Add(this.cbxSearch);
             this.Controls.Add(this.cbxSort);
             this.Controls.Add(this.btnSearch);
@@ -230,9 +236,9 @@
             this.Text = "Tickets";
             this.Load += new System.EventHandler(this.TicketListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ticketBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -247,7 +253,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox cbxSort;
         private System.Windows.Forms.ComboBox cbxSearch;
-        private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn summaryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
@@ -256,5 +261,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sprintIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource ticketBindingSource;
+        private System.Windows.Forms.NumericUpDown nudSearch;
     }
 }

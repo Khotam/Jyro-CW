@@ -8,10 +8,39 @@ namespace Jyro.DAL
 {
     public class Sprint
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        private int _id; 
+        public string Name;
+
+        public int Id
+        {
+            get => _id;
+            set
+            {
+                if (_id < 0)
+                    throw new Exception("ID cannot be negative");
+                _id = value;
+            }
+        }
+
+        public Sprint()
+        {
+
+        }
+
+        public Sprint(int _id)
+        {
+            Id = _id;
+        }
+
+        public override string ToString()
+        {
+            return Convert.ToString(Id);
+        }
+
         public DateTime Date { get; set; }
         public int NumberOfDevelopers { get; set; }
         public string Status { get; set; }
     }
+
+    
 }

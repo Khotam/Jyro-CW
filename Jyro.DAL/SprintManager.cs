@@ -19,7 +19,7 @@ namespace Jyro.DAL
             try
             {
                 var sql = $@"
-INSERT INTO sp_sprint (sp_name_7717, sp_date_7717, sp_no_of_developers_7717, sp_status) 
+INSERT INTO sp_sprint (sp_name_7717, sp_date_7717, sp_no_of_developers_7717, sp_status_7717) 
 VALUES('{s.Name}', '{s.Date}', '{s.NumberOfDevelopers}', '{s.Status}')";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
@@ -49,7 +49,7 @@ UPDATE sp_sprint SET
     sp_name_7717 = '{s.Name}', 
     sp_date_7717 = '{s.Date},
     sp_no_of_developers_7717 = '{s.NumberOfDevelopers}', 
-    sp_status = '{s.Status}', 
+    sp_status_7717 = '{s.Status}', 
 WHERE ti_id_7717 = {s.Id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
@@ -98,7 +98,7 @@ WHERE ti_id_7717 = {s.Id}";
             try
             {
                 var sql = $@"
-SELECT sp_id_7717, sp_name_7717, sp_date_7717, sp_no_of_developers_7717, sp_status
+SELECT sp_id_7717, sp_name_7717, sp_date_7717, sp_no_of_developers_7717, sp_status_7717
 FROM sp_sprint
 WHERE sp_id_7717 = {id}";
                 var command = new SqlCeCommand(sql, connection);
@@ -132,7 +132,7 @@ WHERE sp_id_7717 = {id}";
             var result = new List<Sprint>();
             try
             {
-                var sql = "SELECT sp_id_7717, sp_name_7717, sp_date_7717, sp_no_of_developers_7717, sp_status FROM sp_sprint";
+                var sql = "SELECT sp_id_7717, sp_name_7717, sp_date_7717, sp_no_of_developers_7717, sp_status_7717 FROM sp_sprint";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 var reader = command.ExecuteReader();

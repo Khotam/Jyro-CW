@@ -7,3 +7,12 @@
 \\peter\ZDrive\00007717\Desktop\Jyro\Jyro.DAL\obj\Debug\Jyro.DAL.csproj.CopyComplete
 \\peter\ZDrive\00007717\Desktop\Jyro\Jyro.DAL\obj\Debug\Jyro.DAL.dll
 \\peter\ZDrive\00007717\Desktop\Jyro\Jyro.DAL\obj\Debug\Jyro.DAL.pdb
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\bin\Debug\Jyro.DAL.dll.config
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\bin\Debug\Jyro.DAL.dll
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\bin\Debug\Jyro.DAL.pdb
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\bin\Debug\System.Data.SqlServerCe.dll
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\obj\Debug\Jyro.DAL.csprojAssemblyReference.cache
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\obj\Debug\Jyro.DAL.csproj.CoreCompileInputs.cache
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\obj\Debug\Jyro.DAL.csproj.CopyComplete
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\obj\Debug\Jyro.DAL.dll
+\\peter\ZDrive\00007717\Desktop\Jyro\Jyro-CW\Jyro.DAL\obj\Debug\Jyro.DAL.pdb

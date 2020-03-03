@@ -19,7 +19,7 @@ namespace Jyro.DAL
             try
             {
                 var sql = $@"
-INSERT INTO ti_ticket (ti_summary_7717, ti_description_7717, ti_estimation_7717, ti_priority_7717, ti_status_7717, ti_sprint_id) 
+INSERT INTO ti_ticket (ti_summary_7717, ti_description_7717, ti_estimation_7717, ti_priority_7717, ti_status_7717, ti_sprint_id_7717) 
 VALUES('{t.Summary}', '{t.Description}', '{t.Estimation}', '{t.Priority}', '{t.Status}', '{t.SprintId}')";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
@@ -51,7 +51,7 @@ UPDATE ti_ticket SET
     ti_estimation_7717 = '{t.Estimation}', 
     ti_priority_7717 = '{t.Priority}', 
     ti_status_7717 = '{t.Status}', 
-    ti_sprint_id = '{t.SprintId}', 
+    ti_sprint_id_7717 = '{t.SprintId}', 
 WHERE ti_id_7717 = {t.Id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
@@ -100,7 +100,7 @@ WHERE ti_id_7717 = {t.Id}";
             try
             {
                 var sql = $@"
-SELECT ti_id_7717, ti_summary_7717, ti_description_7717, ti_estimation_7717, ti_priority_7717, ti_status_7717, ti_sprint_id,
+SELECT ti_id_7717, ti_summary_7717, ti_description_7717, ti_estimation_7717, ti_priority_7717, ti_status_7717, ti_sprint_id_7717,
 FROM ti_ticket
 WHERE ti_id_7717 = {id}";
                 var command = new SqlCeCommand(sql, connection);
@@ -134,7 +134,7 @@ WHERE ti_id_7717 = {id}";
             var result = new List<Ticket>();
             try
             {
-                var sql = "SELECT ti_id_7717, ti_summary_7717, ti_description_7717, ti_estimation_7717, ti_priority_7717, ti_status_7717, ti_sprint_id FROM ti_ticket";
+                var sql = "SELECT ti_id_7717, ti_summary_7717, ti_description_7717, ti_estimation_7717, ti_priority_7717, ti_status_7717, ti_sprint_id_7717 FROM ti_ticket";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
                 var reader = command.ExecuteReader();
@@ -169,7 +169,7 @@ WHERE ti_id_7717 = {id}";
                 Estimation = Convert.ToInt32(reader.GetValue(3)),
                 Priority = reader.GetValue(4).ToString(),
                 Status = reader.GetValue(5).ToString(),
-                SprintId = new SprintManager().GetById(Convert.ToInt32(reader.GetValue(7)))
+                SprintId = new SprintManager().GetById(Convert.ToInt32(reader.GetValue(6)))
             };
 
             return t;

@@ -37,5 +37,20 @@ namespace Jyro
         {
             MyForms.GetForm<TicketListForm>().Show();
         }
+
+        private void newSprintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new SprintEditForm().CreateNewSprint();
+        }
+
+        private void allSprintsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyForms.GetForm<SprintListForm>().Show();
+        }
+
+        private void newTicketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TicketEditForm().CreateNewTicket();
+        }
     }
 }
