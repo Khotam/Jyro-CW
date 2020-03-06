@@ -47,11 +47,11 @@ VALUES('{t.Summary}', '{t.Description}', '{t.Estimation}', '{t.Priority}', '{t.S
                 var sql = $@"
 UPDATE ti_ticket SET 
     ti_summary_7717 = '{t.Summary}', 
-    ti_description_7717 = '{t.Description},
+    ti_description_7717 = '{t.Description}',
     ti_estimation_7717 = '{t.Estimation}', 
     ti_priority_7717 = '{t.Priority}', 
     ti_status_7717 = '{t.Status}', 
-    ti_sprint_id_7717 = '{t.SprintId}', 
+    ti_sprint_id_7717 = '{t.SprintId}'
 WHERE ti_id_7717 = {t.Id}";
                 var command = new SqlCeCommand(sql, connection);
                 connection.Open();
@@ -59,7 +59,7 @@ WHERE ti_id_7717 = {t.Id}";
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error " + ex.Message);
             }
             finally
             {

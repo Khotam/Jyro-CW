@@ -35,13 +35,6 @@ namespace Jyro
         private void btnRefresh_Click_1(object sender, EventArgs e)
         {
             LoadData();
-            if (dgvSprint.SelectedRows.Count == 0)
-                MessageBox.Show("Please select a course");
-            else
-            {
-                var s = (Sprint)dgvSprint.SelectedRows[0].DataBoundItem;
-                new SprintEditForm().UpdateSprint(s);
-            }
         }
 
         private void SprintListForm_Load_1(object sender, EventArgs e)

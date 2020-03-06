@@ -9,7 +9,6 @@ namespace Jyro.DAL
         public enum ByAttribute
         {
                Priority,
-               Status,
-               ID
+               Status
         }
 }
